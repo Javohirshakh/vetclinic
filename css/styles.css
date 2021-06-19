@@ -228,6 +228,13 @@ img {
 }
 .logo{
   width: 180px;
+  transition: var(--main-transition);
+}
+.logo:hover{
+  opacity: 0.8;
+}
+.logo:active{
+  opacity: 0.6;
 }
 .logo img{
   position: absolute;
@@ -463,6 +470,9 @@ img {
 .item__img img{
   width: auto;
 }
+.all_services{
+  position: relative;
+}
 .services-list__item a{
   text-decoration: none;
   color: var(--main-font-color);
@@ -475,6 +485,13 @@ img {
   padding: 30px 70px 28px;
   margin-right: 13px;
   border-radius: 5px;
+  transition: var(--main-transition);
+}
+.services-list__item a:hover{
+  opacity: 0.8;
+}
+.services-list__item a:active{
+  opacity: 0.6;
 }
 .services-list__item span{
   text-align: center;
@@ -533,6 +550,7 @@ img {
   background-position: calc(0% + 37px);
   border: none;
   cursor: pointer;
+  transition: var(--main-transition);
 }
 .button__price{
   padding: 15px 36px 15px 65px;
@@ -544,13 +562,50 @@ img {
   padding: 15px 36px 15px 65px;
   background-image: url(../img/order.png);
 }
-
-
+.button:hover{
+  background-color: rgba(51, 51, 51, 0.8);
+}
+.button:active{
+  background-color: rgba(51, 51, 51, 0.6);
+}
+.button__price:hover{
+  background-color: rgba(255, 189, 84, 0.8);
+}
+.button__price:active{
+  background-color: rgba(255, 189, 84, 0.6);
+}
+.arrow-left{
+  width: 15px;
+  height: 25px;
+  background-image: url(../img/arrow-left.svg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(-30px) translateY(100px);
+  border: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+}
+.arrow-right{
+  width: 15px;
+  height: 25px;
+  background-image: url(../img/arrow-right.svg);
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateX(30px) translateY(100px);
+  border: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+}
 /* Subscribe */
 .subscribe{
   padding-top: 180px;
   padding-bottom: 180px;
   background-image: url(../img/subscribe-bg.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
 }
 .subscribe form{
   margin-left: 150px;
@@ -577,4 +632,15 @@ img {
   width: 335px;
   height: 50px;
   margin-right: 22px;
+  border-radius: 5px;
+  border: 2px solid transparent;
+}
+.inputs input:valid{
+  border: 2px solid #90EE90;
+}
+.inputs input:not(:focus){
+  border-color: transparent;
+}
+.inputs input:invalid{
+  border: 2px solid #FF6347;
 }
